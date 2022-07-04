@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Sneek:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="archive" name="Sneek.jar">
+      <element id="module-output" name="Sneek" />
+    </root>
+  </artifact>
+</component>
