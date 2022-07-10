@@ -125,8 +125,8 @@ public class SnakePanel extends JPanel {
 	}
 
 	private void placeApple() {
-		appleX = random.nextInt((int) (gameDimension.width / cellSize)) * cellSize;
-		appleY = random.nextInt((int) (gameDimension.height / cellSize)) * cellSize;
+		appleX = random.nextInt(gameDimension.width / cellSize) * cellSize;
+		appleY = random.nextInt(gameDimension.height / cellSize) * cellSize;
 	}
 
 	public void move() {
