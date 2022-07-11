@@ -1,4 +1,5 @@
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -95,7 +96,7 @@ public class SnakePanel extends JPanel {
 		g.setColor(Color.GREEN);
 		g.fillRect(x[0], y[0], cellSize, cellSize);
 		for (int i = 1; i < snakeSegments; i++) {
-			g.setColor(new Color(45, 180, 0, 255));
+			g.setColor(new Color(45, 180, 0));
 			g.fillRect(x[i], y[i], cellSize, cellSize);
 		}
 	}
