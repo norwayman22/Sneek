@@ -1,10 +1,15 @@
+//import old.SnakePanel;
+import lombok.Setter;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class WASDAdapter extends KeyAdapter implements ActionListener {
-    SnakePanel snakePanel;
+    private final SnakePanel snakePanel;
+    @Setter
+    private Snake snake;
     public WASDAdapter(SnakePanel snakePanel) {
         this.snakePanel = snakePanel;
     }
@@ -12,7 +17,7 @@ public class WASDAdapter extends KeyAdapter implements ActionListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (snakePanel.isRunning()) {
-            int direction = snakePanel.getDirection();
+            int direction = snake.getDirection();
             boolean validDirection;
             switch (e.getKeyCode()) {
                 case KeyEvent.VK_W -> validDirection = direction != KeyEvent.VK_S;
@@ -22,7 +27,7 @@ public class WASDAdapter extends KeyAdapter implements ActionListener {
                 default -> validDirection = false;
             }
             if (validDirection) {
-                snakePanel.setDirection(e.getKeyCode());
+                snake.setDirection(e.getKeyCode());
             }
         } else {
             snakePanel.startGame();
@@ -33,7 +38,7 @@ public class WASDAdapter extends KeyAdapter implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (snakePanel.isRunning()){
-            snakePanel.move();
+            snake.move();
             snakePanel.checkApple();
             snakePanel.checkCollisions();
         }

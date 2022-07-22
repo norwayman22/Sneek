@@ -1,5 +1,3 @@
-package rewrite;
-
 import lombok.Getter;
 import lombok.Setter;
 
