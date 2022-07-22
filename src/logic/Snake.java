@@ -1,3 +1,5 @@
+package logic;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +10,8 @@ import java.util.List;
 public class Snake {
 
 	public static int head;
-	@Getter @Setter
-	private int direction;
-	@Getter
-	private final List<SnakeSegment> segments;
+	@Getter @Setter private int direction;
+	@Getter private final List<SnakeSegment> segments;
 	private SnakeSegment nextTail;
 	private final int cellSize;
 
