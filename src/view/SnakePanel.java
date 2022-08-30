@@ -84,7 +84,7 @@ public class SnakePanel extends JPanel {
 		FontMetrics metrics2 = getFontMetrics(g.getFont());
 		int x = (dimension.width - metrics2.stringWidth("logic.Game Over")) / 2;
 		int y = dimension.height / 2;
-		g.drawString("logic.Game Over", x, y);
+		g.drawString("Game Over", x, y);
 
 		x = (dimension.width - metrics2.stringWidth("Press any key to restart")) / 2;
 		y += g.getFont().getSize();
