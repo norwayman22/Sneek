@@ -82,7 +82,7 @@ public class SnakePanel extends JPanel {
 		drawScore(g);
 
 		FontMetrics metrics2 = getFontMetrics(g.getFont());
-		int x = (dimension.width - metrics2.stringWidth("logic.Game Over")) / 2;
+		int x = (dimension.width - metrics2.stringWidth("Game Over")) / 2;
 		int y = dimension.height / 2;
 		g.drawString("Game Over", x, y);
 
