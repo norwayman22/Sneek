@@ -1,2 +1,2 @@
 # Sneek
-An example snake implementation in Java, using Swing.
+A very basic snake implementation in Java, using Swing.
